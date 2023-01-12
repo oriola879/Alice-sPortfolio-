@@ -1,0 +1,113 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+#name { 
+    width: 200px;
+    margin: 20px;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+#email {
+    width: 200px;
+    margin: 20px;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+#message {
+    width: 200px;
+    margin:20px;
+    height: 200px;
+    margin-bottom: 70px;
+    border-radius: 10px;
+    border: 3px solid black;
+    
+}
+.fa-solid{
+    margin-right:200px;
+    top: 170px;
+    left: 10px;
+    font-size: 40px;
+    color: orange;
+    pointer-events: none;
+}
+#feedback-button { 
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: orange;
+    width: 100px ; 
+    font-size: 25px;
+    
+}
+
+</head>
+
+<body>
+    <div id="contact">
+        <h1 id="contactMeTitle">Contact Me</h1>
+        <form id="feedback-form">
+            <i class="fa-solid fa-user"></i><br>
+            <label for="name">
+                <input type="text" id="name" placeholder="Name" name="name">
+            </label><br>
+            <i class="fa-solid fa-envelope"></i>
+            <label for="email">
+                <input type="email" id="email" placeholder="Email" name="email"><br>
+            </label><br>
+            <i class="fa-solid fa-message"></i>
+            <label for="message"></label><br>
+            <textarea id="feedback" placeholder="feedback" name="feedback"></textarea>
+            </label><br>
+            <button id="feedback-button">Save</button>
+        </form>
+    </div>
+    <div id="cardContainer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("feedback-button").addEventListener("click", function (e) {
+            e.preventDefault();
+            var form = document.getElementById("feedback-form");
+            var formData = new FormData(form);
+            localStorage.setItem("feedback", JSON.stringify({
+                name: formData.get("name"),
+                email: formData.get("email"),
+                feedback: formData.get("feedback")
+            }));
+        });
+
+        let feedback = localStorage.getItem("feedback");
+if (feedback) {
+    let data = JSON.parse(feedback);
+    //Create a card element
+    let card = document.createElement("div");
+    card.setAttribute("class", "card");
+    //Create a name element
+    let name = document.createElement("p");
+    name.innerHTML = "Name: " + data.name;
+    //Create a email element
+    let email = document.createElement("p");
+    email.innerHTML = "Email: " + data.email;
+    //Create a feedback element
+    let feedback = document.createElement("p");
+    feedback.innerHTML = "Feedback: " + data.feedback;
+    //Append the name, email and feedback elements to the card
+    card.appendChild(name);
+    card.appendChild(email);
+    card.appendChild(feedback);
+    //Append the card to the container
+    document.getElementById("cardContainer").appendChild(card);
+}
+});
+          </script>
+</body>
+
+</html>

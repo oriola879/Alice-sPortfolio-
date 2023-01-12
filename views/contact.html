@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/styles/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <img src="../public/styles/images/logo3-removebg-preview.png" alt="theLogo" class="logo" height="120px"
+            width="150px">
+        <ul>
+            <li><a href="main.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="contact.html">CONTACT ME</a></li>
+        </ul>
+    </nav>
+    <div id="contactFeedback">
+ 
+        
+        
+        <div id="form1">
+            <h1>Contact Me</h1>
+        <form id="contact-form">
+            <i class="fa-solid fa-user"></i><br>
+            <label for="name">
+                <input type="text" id="name" placeholder="Name" name="name">
+            </label><br>
+            <i class="fa-solid fa-envelope"></i><br>
+            <label for="email">
+                <input type="email" id="email" placeholder="Email" name="email">
+            </label><br>
+            <i class="fa-solid fa-message"></i><br>
+            <label for="message">
+            <textarea id="message" placeholder="Message"></textarea>
+            </label><br>
+            <button id="submitButton">Save</button>
+
+        </form>
+    </div>
+    <div id="form2">
+        <h1>Leave a Feedback</h1>
+        <form id="feedback-form">
+            <i class="fa-solid fa-user"></i><br>
+            <label for="name">
+                <input type="text" id="name" placeholder="Name" name="name">
+            </label><br>
+            <i class="fa-solid fa-envelope"></i><br>
+            <label for="email">
+                <input type="email" id="email" placeholder="Email" name="email"><br>
+            </label>
+            <i class="fa-solid fa-message"></i><br>
+            <label for="message">
+            <textarea id="message" placeholder="feedback" name="feedback"></textarea>
+            </label><br>
+            <button id="feedback-button">Save</button>
+        </form>
+    
+</div>
+</div>
+    
+    
+        <script>
+            document.getElementById("submitButton").addEventListener("click", function (event) {
+                event.preventDefault();
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var message = document.getElementById("message").value;
+                localStorage.setItem("name", name);
+                localStorage.setItem("email", email);
+                localStorage.setItem("message", message);
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("feedback-button").addEventListener("click", function (e) {
+            e.preventDefault();
+            var form = document.getElementById("feedback-form");
+            var formData = new FormData(form);
+            localStorage.setItem("feedback", JSON.stringify({
+                name: formData.get("name"),
+                email: formData.get("email"),
+                feedback: formData.get("feedback")
+            }));
+        });
+ });
+
+        </script>
+
+</body>
+
+</html>

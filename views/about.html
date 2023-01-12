@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="../public/styles/about.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="about">
+        <nav>
+            <img src="../public/styles/images/logo3-removebg-preview.png" alt="theLogo" class="logo" height="120px" width="150px">
+            <ul>
+                <li><a href="main.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+
+            <h1>About Me</h1>
+            <img id="img1" src="../public/styles/images/usingtheLaptop.jpg">
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusantium sint quas vero, a, nostrum perspiciatis minus
+                mollitia libero architecto aut earum hic illo laborum! Numquam
+                velit eum minus hic consequatur?</p>
+        </div>
+        <button id="myButton">Click me!</button>
+
+        <section id="skills">
+
+            
+            <table>
+                <tr>
+                    <th>Skills</th>
+                    <th>Level</th>
+                </tr>
+                <tr>
+                    <td style="width:30%">HTML</td>
+                    <td style="width: 50%;"><progress value="95" max="100" style="width:100%; height: 15px; 
+               background-color:#fffbfb; color: white;"></progress></td>
+                </tr>
+                <tr>
+                    <td style="width:30%">CSS</td>
+                    <td style="width: 50%;"><progress value="75" max="100" style="width:100%; height: 15px; 
+              background-color:#dddddd;"></progress></td>
+                </tr>
+                <tr>
+                    <td style="width:30%">JavaScript</td>
+                    <td style="width: 50%;"><progress value="85" max="100" style="width:100%; height: 15px; 
+               background-color:#dddddd;"></progress></td>
+                </tr>
+                <tr>
+                    <td style="width:30%">NodeJs</td>
+                    <td style="width: 50%;"><progress value="80" max="100" style="width:100%; height: 15px; 
+                 background-color:#dddddd;"></progress></td>
+                </tr>
+                <tr>
+                    <td style="width:30%">Photoshop</td>
+                    <td style="width: 50%;"><progress value="90" max="100" style="width:100%; height: 15px; 
+                 background-color:#dddddd;"></progress></td>
+                </tr>
+            </table>
+            <div id="statistics">
+                <div class="statsContent">
+                    <div class="stats">
+                        <h1>16</h1>
+                        <p>Projects Done</p>
+                    </div>
+                    <div class="stats">
+                        <h1>435</h1>
+                        <p>Cups of coffee</p>
+                    </div>
+                    <div class="stats">
+                        <h1>45</h1>
+                        <p>Designs</p>
+                    </div>
+                        <div class="stats">
+                            <h1>3</h1>
+                            <p>Years experience</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="whatIdo">
+            <h1 id="whatIdoTitle">What I Do</h1>
+                <div style="position: relative;">
+            <table class="whatIdoTable">
+                <tr>
+                  <td>
+                    <i class="fa-sharp fa-solid fa-camera-retro"></i>
+                    <h1 class="tdTitle">Photography</h1>
+                    <p class="whatIdoParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam magni cum?Non nihil voluptatibus deleniti sint similique </p></td>
+                    <td>
+                    <i class="fa-sharp fa-solid fa-laptop-code"></i>
+                    <h1 class="tdTitle">Web developer</h1>
+                  <p class="whatIdoParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam magni cum? Non nihil voluptatibus deleniti sint similique</p></td>
+                  <td>
+                    <i class="fa-sharp fa-solid fa-palette"></i>
+                    <h1 class="tdTitle">Design</h1>
+                    <p class="whatIdoParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam magni cum? Non nihil voluptatibus deleniti sint similique</p></td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fa-sharp fa-solid fa-photo-film"></i>
+                        <h1 class="tdTitle">Photography</h1>
+                        <p class="whatIdoParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam magni cum? Non nihil voluptatibus deleniti sint similique </p></td>
+                    <td>
+                        <i class="fa-sharp fa-solid fa-code-merge"></i>
+                        <h1 class="tdTitle">DevOps</h1>
+                        <p class="whatIdoParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam magni cum? Non nihil voluptatibus deleniti sint similique</p></td>
+                    <td>
+                        <i class="fa-sharp fa-solid fa-plane"></i>
+                        <h1 class="tdTitle">Illustartion</h1>
+                        <p class="whatIdoParagraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex ullam magni cum? Non nihil voluptatibus deleniti sint similique</p></td>
+                </tr>
+              </table>
+        </section>
+    </div>
+</div>
+    <script>
+        // Get the button
+        var button = document.getElementById("myButton");
+
+        // When the button is clicked, execute the scrollDown function
+        button.addEventListener("click", scrollDown);
+
+        function scrollDown() {
+            // Scroll down the page by 1000 pixels
+            window.scrollBy(0, 550);
+        }
+    </script>
+
+</body>
+
+</html>

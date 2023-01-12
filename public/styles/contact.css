@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background:#eff4ef;
+   
+}
+#quoteContact{ 
+    color: orange;
+    height: 55%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/backkk.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+   
+}
+nav {
+    display: flex;
+    width: 84%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 2px 2;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+nav ul li a:hover {
+    color:orange;
+}
+
+#form1 {
+        height: 150px; /* or any value that works for your layout */
+}
+
+#contactFeedback { 
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: stretch;
+    
+}
+#name { 
+    width: 400px;
+    margin: 20px;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid #666;
+}
+#email {
+    width: 400px;
+    margin: 20px;
+    height: 50px;
+    border-radius: 10px;
+    border: 3px solid #666;
+}
+#message {
+    width: 400px;
+    margin:20px;
+    height: 200px;
+    margin-bottom: 70px;
+    border-radius: 10px;
+    border: 3px solid #666;
+    
+}
+.fa-solid{
+    margin-right:200px;
+    top: 170px;
+    left: 10px;
+    font-size: 40px;
+    color: orange;
+    pointer-events: none;
+}
+#feedback-button { 
+    color: #666;
+    border: none;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    background: orange;
+    width: 100px ; 
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+#submitButton { 
+    color: #666;
+    border: none;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    background: orange;
+    width: 100px ; 
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+#form1 h1 { 
+    padding:10px;
+    text-align: center;
+    color: orange;
+}
+#form2 h1 { 
+    padding:10px;
+    text-align: center;
+    color: orange;
+}
+
+
+
+
+
+    

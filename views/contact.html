@@ -15,12 +15,15 @@
         <img src="../public/styles/images/logo3-removebg-preview.png" alt="theLogo" class="logo" height="120px"
             width="150px">
         <ul>
-            <li><a href="main.html">HOME</a></li>
+            <li><a href="../index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
             <li><a href="contact.html">CONTACT ME</a></li>
         </ul>
     </nav>
+    <div id="display-data">
+        
+    </div>
     <div id="contactFeedback">
  
         
@@ -67,29 +70,17 @@
     
     
         <script>
-            document.getElementById("submitButton").addEventListener("click", function (event) {
-                event.preventDefault();
-                var name = document.getElementById("name").value;
-                var email = document.getElementById("email").value;
-                var message = document.getElementById("message").value;
-                localStorage.setItem("name", name);
-                localStorage.setItem("email", email);
-                localStorage.setItem("message", message);
-            });
+            document.getElementById("feedback-button").addEventListener("click", saveData);
+            function saveData() {
+            var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var feedback = document.getElementById("message").value;
+ }
+localStorage.setItem("name", name);
+localStorage.setItem("email", email);
+localStorage.setItem("feedback", feedback);
 
-            document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("feedback-button").addEventListener("click", function (e) {
-            e.preventDefault();
-            var form = document.getElementById("feedback-form");
-            var formData = new FormData(form);
-            localStorage.setItem("feedback", JSON.stringify({
-                name: formData.get("name"),
-                email: formData.get("email"),
-                feedback: formData.get("feedback")
-            }));
-        });
- });
-
+document.getElementById("display-data").innerHTML = "Name: " + localStorage.getItem("name") + "<br>" + "Email: " + localStorage.getItem("email") + "<br>" + "Feedback: " + localStorage.getItem("feedback");
         </script>
 
 </body>

@@ -45,18 +45,9 @@ nav ul li a:hover {
 
 #form1 {
         height: 150px; /* or any value that works for your layout */
+        text-align: center;
 }
 
-#contactFeedback { 
-    
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: stretch;
-        align-content: stretch;
-    
-}
 #name { 
     width: 400px;
     margin: 20px;
@@ -81,24 +72,15 @@ nav ul li a:hover {
     
 }
 .fa-solid{
-    margin-right:200px;
+    margin-right:400px;
     top: 170px;
     left: 10px;
-    font-size: 40px;
+    font-size: 30px;
     color: orange;
     pointer-events: none;
+    
 }
-#feedback-button { 
-    color: #666;
-    border: none;
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
-    background: orange;
-    width: 100px ; 
-    font-size: 20px;
-    margin-bottom: 60px;
-}
+
 
 #submitButton { 
     color: #666;
@@ -116,14 +98,23 @@ nav ul li a:hover {
     text-align: center;
     color: orange;
 }
-#form2 h1 { 
-    padding:10px;
-    text-align: center;
-    color: orange;
+#contactme { 
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+padding: 10px;
 }
 
-
-
-
-
+ .icon i{
+    margin-right: -10px;
     
+  }
+  p {
+    margin-left: -5px;
+  }
+ 

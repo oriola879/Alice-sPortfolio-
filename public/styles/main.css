@@ -11,8 +11,6 @@
     width: 100%;
     height: 100vh;
     background: #eff4ef;
-    
-
 }
 nav {
     display: flex;
@@ -41,27 +39,34 @@ nav ul li a:hover {
 
 .details {
     width: 100%;
-    margin-left: 8%;
+ padding: 50px;
     margin-top: 15%;
+    overflow: hidden; /*hide the overflow on both axis*/
 }
 
 .details h1 {
     font-size: 50px;
     margin-bottom: 20px;
     color: rgb(8, 8, 8);
+    overflow: hidden;
+   
 }
 
 span {
-    color: rgb(255, 165, 0)
+    color: rgb(255, 165, 0);
+    overflow: hidden;
 }
 
 .images {
-    width: 45%;
+    width: 40%;
     height: 80%;
     position: absolute;
     bottom: 0;
     left: 50%;
+    
+   
 }
+
 
 .images img {
     height: 100%;

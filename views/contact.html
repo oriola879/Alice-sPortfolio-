@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="../public/styles/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
 
+</head>
 <body>
     <nav>
         <img src="../public/styles/images/logo3-removebg-preview.png" alt="theLogo" class="logo" height="120px"
@@ -18,71 +17,69 @@
             <li><a href="../index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
             <li><a href="portfolio.html">PORTFOLIO</a></li>
+            <li><a href="feedback.html">FEEDBACK</a></li>
             <li><a href="contact.html">CONTACT ME</a></li>
+
         </ul>
     </nav>
-    <div id="display-data">
-        
+          
+    <div id="form1">
+        <h1>Contact Form</h1>
+    <form id="contact-form">
+        <i class="fa-solid fa-user"></i><br>
+        <label for="name">
+            <input type="text" id="name" placeholder="Name" name="name">
+        </label><br>
+        <i class="fa-solid fa-envelope"></i><br>
+        <label for="email">
+            <input type="email" id="email" placeholder="Email" name="email">
+        </label><br>
+        <i class="fa-solid fa-message"></i><br>
+        <label for="message">
+        <textarea id="message" placeholder="Message"></textarea>
+        </label><br>
+        <button id="submitButton">Save</button>
+    </form>
+    <h1>Contact Me</h1>
+    <div id="contactme">
+    <div class="icon">
+        <i class="fa-solid fa-location-dot"></i><br>
+        <p>Stability LTD., Old Town Avenue,<br> New York, USA 23000</p>
     </div>
-    <div id="contactFeedback">
- 
-        
-        
-        <div id="form1">
-            <h1>Contact Me</h1>
-        <form id="contact-form">
-            <i class="fa-solid fa-user"></i><br>
-            <label for="name">
-                <input type="text" id="name" placeholder="Name" name="name">
-            </label><br>
-            <i class="fa-solid fa-envelope"></i><br>
-            <label for="email">
-                <input type="email" id="email" placeholder="Email" name="email">
-            </label><br>
-            <i class="fa-solid fa-message"></i><br>
-            <label for="message">
-            <textarea id="message" placeholder="Message"></textarea>
-            </label><br>
-            <button id="submitButton">Save</button>
-
-        </form>
+    <div class="icon">
+       <i class="fa-solid fa-phone"></i></br>
+        <p> +1700 438-888 <br>+1700 769-799</p>
     </div>
-    <div id="form2">
-        <h1>Leave a Feedback</h1>
-        <form id="feedback-form">
-            <i class="fa-solid fa-user"></i><br>
-            <label for="name">
-                <input type="text" id="name" placeholder="Name" name="name">
-            </label><br>
-            <i class="fa-solid fa-envelope"></i><br>
-            <label for="email">
-                <input type="email" id="email" placeholder="Email" name="email"><br>
-            </label>
-            <i class="fa-solid fa-message"></i><br>
-            <label for="message">
-            <textarea id="message" placeholder="feedback" name="feedback"></textarea>
-            </label><br>
-            <button id="feedback-button">Save</button>
-        </form>
+    <div class="icon">
+        <i class="fa-solid fa-envelope"></i><br>
+        <p>	info@aliceS.com <br> info@alice24.com</p>
+    </div>
+    <div class="icon">
+        <i class="fa-solid fa-clock"></i></br>
+        <p>Monday-Friday 9:00-21:00</p>
+    </div>
+    </div>
+    <script>
+        // Get the form and the submit button
+        const form = document.getElementById("contact-form");
+        const submitButton = document.getElementById("submitButton");
+      
+        // Add a submit event listener to the form
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // prevent the form from submitting
     
-</div>
-</div>
+            // Get the form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
     
+            // Save the form data to local storage
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("message", message);
     
-        <script>
-            document.getElementById("feedback-button").addEventListener("click", saveData);
-            function saveData() {
-            var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
-  var feedback = document.getElementById("message").value;
- }
-localStorage.setItem("name", name);
-localStorage.setItem("email", email);
-localStorage.setItem("feedback", feedback);
-
-document.getElementById("display-data").innerHTML = "Name: " + localStorage.getItem("name") + "<br>" + "Email: " + localStorage.getItem("email") + "<br>" + "Feedback: " + localStorage.getItem("feedback");
-        </script>
-
+            alert("Form submitted and data saved to local storage!");
+        });
+    </script>
 </body>
-
 </html>
